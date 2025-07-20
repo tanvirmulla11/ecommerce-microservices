@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        SERVICE_NAME = 'product-service' // 🔁 change for product/order
+        SERVICE_NAME = 'order-service' // 🔁 change for product/order
         DOCKER_USERNAME = 'tanvirmulla11' // ✅ your DockerHub username
         DOCKER_IMAGE = "${DOCKER_USERNAME}/${SERVICE_NAME}:${BUILD_NUMBER}"
     }
