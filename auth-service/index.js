@@ -1,16 +1,14 @@
 const express = require('express');
-const path = require('path');
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = 3001;
 
-// Serve static files from "public" folder
-app.use(express.static(path.join(__dirname, 'public')));
+// Serve static files from the "PUBLIC" folder
+app.use(express.static('PUBLIC'));
 
-// Home route
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+  res.sendFile(__dirname + '/PUBLIC/index.html');
 });
 
-app.listen(port, () => {
-  console.log(`🛒 Flipkart-style app listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Auth service running at http://localhost:${PORT}`);
 });
