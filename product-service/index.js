@@ -1,8 +1,7 @@
 const express = require('express');
 const app = express();
-const PORT = 3000;
+const PORT = 3003;
 
-// Serve static files from the "PUBLIC" folder
 app.use(express.static('PUBLIC'));
 
 app.get('/', (req, res) => {
